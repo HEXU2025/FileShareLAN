@@ -1,0 +1,56 @@
+{
+  "name": "file-share-lan",
+  "version": "1.0.0",
+  "description": "局域网文件共享应用",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "vite build && cross-env NODE_ENV=development electron .",
+    "electron:build": "vite build && electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HEXU2025/Fastlane.git"
+  },
+  "keywords": [
+    "electron",
+    "vue",
+    "file-sharing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HEXU2025/Fastlane/issues"
+  },
+  "homepage": "https://github.com/HEXU2025/Fastlane#readme",
+  "dependencies": {
+    "electron-store": "^8.1.0",
+    "element-plus": "^2.5.5",
+    "express": "^5.1.0",
+    "node-schedule": "^2.1.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "cross-env": "^7.0.3",
+    "electron": "^30.0.0",
+    "electron-builder": "^26.0.12",
+    "vite": "^5.1.5"
+  },
+  "build": {
+    "appId": "com.fileshare.lan",
+    "productName": "File Share LAN",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "public/**/*"
+    ],
+    "icon": "public/favicon.ico"
+  }
+}
